@@ -4,7 +4,7 @@ const program = require("commander");
 
 program
   .version(require("../package.json").version)
-  .usage("[project-name]")
+  .usage("[options] [project-name]")
   .option("-c, --create", "create a project")
   .parse(process.argv);
 

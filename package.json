@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "tdx": "./bin/cli.js"
+    "tdx": "./bin/tdx.js"
   },
   "scripts": {},
   "keywords": [],
