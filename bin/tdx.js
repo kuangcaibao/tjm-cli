@@ -44,6 +44,7 @@ function create() {
       message: "Target directory exists. Continue?",
       name: "ok"
     }], function(ans) {
+      console.log(ans);
       if(ans.ok) {
 
         rm(dpath);
