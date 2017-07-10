@@ -12,8 +12,8 @@ program
  * help 
  */
 function help() {
-  console.log(program.args.length);
-  if(program.args.length < 0) {
+  // console.log(program.args.length);
+  if(program.args.length <= 0) {
     return program.help();
   }
 }
@@ -27,5 +27,9 @@ if(program.create) {
 // 创建项目逻辑
 function create() {
 
-  console.log("project create");
+  if(program.args.length < 2) {
+    return program.help();
+  }
+
+  console.log(program.args);
 }
