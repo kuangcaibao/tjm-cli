@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
 
-git add .
+echo "--- publish package---"
+git add . &&
+git commit -m "update" &&
+npm version patch &&
 
-git commit -m "update"
-
-npm version patch
-
-npm uninstall -g tdx-cli-test
-
+echo "--- update package ---"
+npm uninstall -g tdx-cli-test &&
 npm install -g tdx-cli-test
