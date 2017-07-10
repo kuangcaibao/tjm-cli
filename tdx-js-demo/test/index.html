@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>浏览器端测试</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../node_modules/mocha/mocha.css">
+  <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="../node_modules/chai/chai.js"></script>
+  <script type="text/javascript" src="../node_modules/mocha/mocha.js"></script>
+</head>
+<body>
+<div id="mocha"></div>
+</body>
+<script>mocha.setup('bdd')</script>
+<script type="text/javascript" src="/assert/bundle.test.js"></script>
+<script>
+  if (window.initMochaPhantomJS) {
+    initMochaPhantomJS();
+  }
+  expect = chai.expect;  
+  mocha.ui('bdd');
+  mocha.run();
+</script>
+</html>

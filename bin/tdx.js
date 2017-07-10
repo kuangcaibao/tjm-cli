@@ -6,6 +6,7 @@ const inquirer = require("inquirer");
 const rm = require("rimraf").sync;
 const ora = require("ora");
 const download = require("download-git-repo");
+const path = require("path");
 
 program
   .version(require("../package.json").version)
@@ -32,7 +33,9 @@ if(program.create) {
 // 创建项目逻辑
 function create() {
 
-  var dpath = program.args[0];
+  var dname = program.args[0];
+
+  var dpath = path.resovle(__dirname, dname);
 
   if(exists(dpath)) {
 
@@ -44,23 +47,23 @@ function create() {
       if(ans.ok) {
 
         rm(dpath);
-        downloadTemplate(dppath);
+        downloadTemplate(dname);
       }
     });
   }
   else {
 
-    downloadTemplate(dpath);
+    downloadTemplate(dname);
   }
 }
 
 // 下载模板工程
-function downloadTemplate(dpath) {
+function downloadTemplate(dname) {
 
   var spinner = ora("downloading template...");
   spinner.start();
 
-  download("kuangcaibao/tdx-js-demo", dpath, function(err) {
+  download("kuangcaibao/tdx-js-demo", dname, function(err) {
     
     spinner.stop();
     if(err) {
