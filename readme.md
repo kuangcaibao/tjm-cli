@@ -3,11 +3,11 @@
 全局安装包
 
 ```
-npm install -g tdx-cli-test
+npm install -g tjm-cli
 ```
 
 执行命令
 
 ```
-tdx --help
+tjm-cli --help
 ```
