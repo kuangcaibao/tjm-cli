@@ -27,9 +27,5 @@ if(program.create) {
 // 创建项目逻辑
 function create() {
 
-  if(program.args.length < 2) {
-    return program.help();
-  }
-
   console.log(program.args);
 }
