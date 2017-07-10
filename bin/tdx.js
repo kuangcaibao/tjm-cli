@@ -43,7 +43,7 @@ function create() {
       type: "confirm",
       message: "Target directory exists. Continue?",
       name: "ok"
-    }], function(ans) {
+    }]).then(function(ans) {
       console.log(ans);
       if(ans.ok) {
 
