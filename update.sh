@@ -11,7 +11,7 @@ npm publish
 echo ""
 echo "--- update package ---"
 echo ""
-# npm uninstall -g tdx-cli-test
-npm install -g tdx-cli-test
-# npm update -g tdx-cli-test
-tjm --version
+# npm uninstall -g tjm-cli
+npm install -g tjm-cli
+# npm update -g tjm-cli
+tjm-cli --version
