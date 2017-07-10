@@ -35,9 +35,9 @@ function create() {
 
   var dname = program.args[0];
 
-  var dpath = path.resolve(__dirname, dname);
+  // var dpath = path.resolve(__dirname, dname);
 
-  if(exists(dpath)) {
+  if(exists(dname)) {
 
     inquirer.prompt([{
       type: "confirm",
@@ -47,7 +47,7 @@ function create() {
       console.log(ans);
       if(ans.ok) {
 
-        rm(dpath);
+        rm(dname);
         downloadTemplate(dname);
       }
     });
