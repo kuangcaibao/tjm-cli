@@ -12,6 +12,6 @@ echo ""
 echo "--- update package ---"
 echo ""
 # npm uninstall -g tdx-cli-test
-# npm install -g tdx-cli-test
-npm update -g tdx-cli-test
-npm view tdx-cli-test version
+npm install -g tdx-cli-test
+# npm update -g tdx-cli-test
+tdx --version

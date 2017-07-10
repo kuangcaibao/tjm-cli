@@ -35,7 +35,7 @@ function create() {
 
   var dname = program.args[0];
 
-  var dpath = path.resovle(__dirname, dname);
+  var dpath = path.resolve(__dirname, dname);
 
   if(exists(dpath)) {
 
