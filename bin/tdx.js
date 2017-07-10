@@ -36,17 +36,17 @@ function create() {
 
   if(exists(dpath)) {
 
-    inquirer.prompt([
+    inquirer.prompt([{
       type: "confirm",
       message: "Target directory exists. Continue?",
       name: "ok"
-    ], function(ans) {
+    }], function(ans) {
       if(ans.ok) {
 
         rm(dpath);
         downloadTemplate(dppath);
       }
-    })
+    });
   }
   else {
 
